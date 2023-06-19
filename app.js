@@ -22,6 +22,11 @@ const connect = ()=>{
   }
 }
 
+app.get('/',(req,res)=>{
+  res.send('welcome')
+
+})
+
 app.use('/tasks',TaskmanRouter)
 
 app.listen (port,()=>{
