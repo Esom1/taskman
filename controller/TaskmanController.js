@@ -19,10 +19,9 @@ const create_route = async (req,res)=>{
 
 // getting all posts
 const all_route = async (req,res)=>{
+  try{
   const allRoute = await TASK.find()
-try{
   res.json(allRoute)
-  
 }catch(err){
   res.status(404).json({message:err})
 }
